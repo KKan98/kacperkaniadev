@@ -18,7 +18,7 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding-top: 2em;
-    padding: 16px 32px;
+  padding: 16px 32px;
 }
 
 body {
@@ -27,33 +27,4 @@ body {
   color: white;
 
   line-height: 1.7;
-}
-
-header {
-  background-color: var(--bg-header);
-}
-
-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 32px;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-nav {
-  display: flex;
-  gap: 24px;
-}
-
-nav a {
-  color: var(--muted);
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: white;
 }
