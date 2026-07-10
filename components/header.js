@@ -35,8 +35,8 @@ headerTemplate.innerHTML = `
     <navbar>
       <p>Kacper Kania</p>
       <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
       </nav>
     </navbar>
   </header>
