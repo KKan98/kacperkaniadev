@@ -1,9 +1,12 @@
 :root {
   --bg-header: #080a0f;
   --bg: #272727;
-  --border: #202021;
+  --border: #080a0f;
   --muted: #9ca3af;
   --bright: #cdd3dc;
+  --bg-blog-post: rgb(48, 48, 50);
+  --gap: 24px;
+  --radius: 8px;
 }
 
 * {
@@ -57,4 +60,37 @@ body {
 ul li {
   list-style: none;
   display: inline;
+}
+
+.blog-post {
+  position: relative;
+  margin-bottom: var(--gap);
+  padding: var(--gap);
+  background: var(--bg-blog-post);
+  border-radius: var(--radius);
+  transition: transform .1s;
+  border: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.blog-post h1 {
+  font-size: 25px;
+  color: var(--bright);
+}
+
+.blog-summarize {
+  color: var(--muted);
+}
+
+blog-footer {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.entry-link {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
