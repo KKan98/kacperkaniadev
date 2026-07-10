@@ -1,4 +1,5 @@
 const headerTemplate = document.createElement('template');
+const BASE = location.hostname === "kkan98.github.io" ? "/kacperkaniadev" : "";
 
 headerTemplate.innerHTML = `
   <style>
@@ -15,6 +16,10 @@ headerTemplate.innerHTML = `
       max-width: 800px;
       margin: 0 auto;
       box-sizing: border-box;
+    }
+
+    navbar p {
+      color: var(--bright);
     }
 
     nav {
@@ -35,8 +40,8 @@ headerTemplate.innerHTML = `
     <navbar>
       <p>Kacper Kania</p>
       <nav>
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
+        <a href="${BASE}/index.html">Home</a>
+        <a href="${BASE}/about.html">About</a>
       </nav>
     </navbar>
   </header>
