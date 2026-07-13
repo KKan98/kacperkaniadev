@@ -47,7 +47,7 @@ ul li {
   color: var(--muted);
 }
 
-blog-footer {
+.blog-footer {
   color: var(--muted);
   font-size: 12px;
 }

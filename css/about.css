@@ -1,11 +1,3 @@
-@media(max-width: 768px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 .hero {
   position: relative;
   display: flex;
@@ -21,14 +13,25 @@
   margin-right: 40px;
 }
 
- #hero-info {
+ .hero-info {
+  margin-top: 70px;
+}
+
+.about-me {
   margin-top: 80px;
 }
 
-#about-me {
-  margin-top: 80px;
-}
-
-#about-me a {
+.about-me a {
   color: rgb(110, 147, 125);
+}
+
+@media(max-width: 768px) {
+  .hero {
+    display: block;
+    margin-top: 0px;
+  }
+
+  .hero img {
+    display: none;
+  }
 }
