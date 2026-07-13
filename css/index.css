@@ -6,10 +6,6 @@
   min-height: 320px;
 }
 
-#panel h1 {
-  color: var(--bright);
-}
-
 .social-row {
   font-size: 40px;
 }

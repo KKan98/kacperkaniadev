@@ -1,5 +1,5 @@
 .hero {
-  position: relative;
+  align-items: center;
   display: flex;
   margin-top: 60px;
 }
@@ -13,16 +13,14 @@
   margin-right: 40px;
 }
 
- .hero-info {
-  margin-top: 70px;
-}
-
+.hero-info,
 .about-me {
-  margin-top: 80px;
+  margin-top: 70px;
+  text-align: justify;
 }
 
 .about-me a {
-  color: rgb(110, 147, 125);
+  color: #6e937d;
 }
 
 @media(max-width: 768px) {
