@@ -20,7 +20,8 @@
 }
 
 .about-me a {
-  color: #6e937d;
+  color: var(--link);
+  text-decoration: none;
 }
 
 @media(max-width: 768px) {
