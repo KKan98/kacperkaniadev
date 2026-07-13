@@ -1,0 +1,25 @@
+hero {
+  position: relative;
+  display: flex;
+  margin-top: 60px;
+}
+
+hero img {
+  width: 40%;
+  height: auto;
+  transition: transform .1s;
+  border-radius: 40px;
+  margin-right: 40px;
+}
+
+ #hero-info {
+  margin-top: 80px;
+}
+
+#about-me {
+  margin-top: 80px;
+}
+
+#about-me a {
+  color: rgb(110, 147, 125);
+}
