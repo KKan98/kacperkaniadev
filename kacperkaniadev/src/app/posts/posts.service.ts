@@ -1,6 +1,21 @@
 import { Service } from "@angular/core";
 import { PostModel } from "./post.model";
-import { marked } from 'marked'
+import { marked } from 'marked';
+import hljs from 'highlight.js/lib/common';
+
+marked.use({
+  renderer: {
+    code({ text, lang }) {
+      const language = lang?.split(/\s+/)[0];
+      const highlighted = language && hljs.getLanguage(language)
+        ? hljs.highlight(text, { language }).value
+        : hljs.highlightAuto(text).value;
+
+      const languageClass = language ? ` language-${language}` : '';
+      return `<pre><code class="hljs${languageClass}">${highlighted}</code></pre>`;
+    }
+  }
+});
 
 @Service()
 export class PostsService {

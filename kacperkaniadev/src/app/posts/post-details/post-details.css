@@ -85,6 +85,41 @@
   color: var(--bright);
 }
 
+:host ::ng-deep .markdown-content .hljs-comment,
+:host ::ng-deep .markdown-content .hljs-quote {
+  color: #7f8c98;
+}
+
+:host ::ng-deep .markdown-content .hljs-keyword,
+:host ::ng-deep .markdown-content .hljs-selector-tag,
+:host ::ng-deep .markdown-content .hljs-literal,
+:host ::ng-deep .markdown-content .hljs-title,
+:host ::ng-deep .markdown-content .hljs-section {
+  color: #ff7ab2;
+}
+
+:host ::ng-deep .markdown-content .hljs-string,
+:host ::ng-deep .markdown-content .hljs-attr,
+:host ::ng-deep .markdown-content .hljs-built_in {
+  color: #a8e6cf;
+}
+
+:host ::ng-deep .markdown-content .hljs-number,
+:host ::ng-deep .markdown-content .hljs-symbol,
+:host ::ng-deep .markdown-content .hljs-variable {
+  color: #ffd580;
+}
+
+:host ::ng-deep .markdown-content .hljs-type,
+:host ::ng-deep .markdown-content .hljs-class .hljs-title,
+:host ::ng-deep .markdown-content .hljs-function .hljs-title {
+  color: #82aaff;
+}
+
+:host ::ng-deep .markdown-content .hljs-meta {
+  color: #c792ea;
+}
+
 :host ::ng-deep .markdown-content img {
   display: block;
   max-width: 100%;
