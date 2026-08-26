@@ -14,11 +14,11 @@
   color: var(--bright);
 }
 
-.blog-summarize {
+.post-summarize {
   color: var(--muted);
 }
 
-.blog-footer {
+.post-footer {
   color: var(--muted);
   font-size: 12px;
 }
@@ -29,4 +29,5 @@
   right: 0;
   top: 0;
   bottom: 0;
+  cursor: pointer;
 }

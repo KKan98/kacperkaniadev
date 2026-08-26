@@ -1,0 +1,120 @@
+:host {
+  display: block;
+}
+
+:host ::ng-deep .markdown-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px;
+  color: var(--bright);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+:host ::ng-deep .markdown-content > :first-child {
+  margin-top: 0;
+}
+
+:host ::ng-deep .markdown-content h1,
+:host ::ng-deep .markdown-content h2,
+:host ::ng-deep .markdown-content h3,
+:host ::ng-deep .markdown-content h4 {
+  color: white;
+  line-height: 1.25;
+  margin: 2rem 0 1rem;
+}
+
+:host ::ng-deep .markdown-content h1 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+:host ::ng-deep .markdown-content h2 {
+  font-size: 1.7rem;
+}
+
+:host ::ng-deep .markdown-content h3 {
+  font-size: 1.35rem;
+}
+
+:host ::ng-deep .markdown-content p,
+:host ::ng-deep .markdown-content ul,
+:host ::ng-deep .markdown-content ol {
+  margin: 1rem 0;
+}
+
+:host ::ng-deep .markdown-content ul,
+:host ::ng-deep .markdown-content ol {
+  padding-left: 1.5rem;
+}
+
+:host ::ng-deep .markdown-content a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+:host ::ng-deep .markdown-content blockquote {
+  margin: 1.5rem 0;
+  padding: 0.25rem 1rem;
+  border-left: 4px solid var(--link);
+  color: var(--muted);
+}
+
+:host ::ng-deep .markdown-content code {
+  padding: 0.15rem 0.35rem;
+  background: var(--bg-blog-post);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+:host ::ng-deep .markdown-content pre {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  background: var(--bg-header);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+:host ::ng-deep .markdown-content pre code {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--bright);
+}
+
+:host ::ng-deep .markdown-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: var(--radius);
+}
+
+:host ::ng-deep .markdown-content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+:host ::ng-deep .markdown-content th,
+:host ::ng-deep .markdown-content td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+:host ::ng-deep .markdown-content th {
+  color: white;
+  background: var(--bg-blog-post);
+}
+
+@media (max-width: 600px) {
+  :host ::ng-deep .markdown-content {
+    padding: 24px 16px;
+    font-size: 1rem;
+  }
+}

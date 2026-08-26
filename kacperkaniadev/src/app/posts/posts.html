@@ -1,0 +1,12 @@
+@for (post of posts; track post.slug) {
+  <article class="blog-post">
+    <h1>{{ post.title }}</h1>
+    <div class="post-summarize">
+      {{ post.summary }}
+    </div>
+    <section class="post-footer">
+      <span>{{ post.footer.creationDate | date:'mediumDate'}} · {{ post.footer.readingTime }} min · {{ post.footer.words }} words</span> 
+    </section>
+    <a class="entry-link" [aria-label]="post.title" [routerLink]="['posts', post.slug]"></a>
+  </article>
+}

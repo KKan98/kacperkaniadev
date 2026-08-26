@@ -1,4 +1,4 @@
-export type BlogModel = {
+export type PostModel = {
   slug: string,
   title: string,
   summary: string,
