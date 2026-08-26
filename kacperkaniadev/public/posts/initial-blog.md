@@ -22,3 +22,4 @@ Here is some TypeScript:
 export function greet(name: string): string {
   return `Hello, ${name}!`;
 }
+```

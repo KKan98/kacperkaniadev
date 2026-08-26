@@ -95,56 +95,34 @@
 :host ::ng-deep .markdown-content .hljs-literal,
 :host ::ng-deep .markdown-content .hljs-title,
 :host ::ng-deep .markdown-content .hljs-section {
-  color: #ff7ab2;
+  color: #C586C0;
 }
 
-:host ::ng-deep .markdown-content .hljs-string,
-:host ::ng-deep .markdown-content .hljs-attr,
-:host ::ng-deep .markdown-content .hljs-built_in {
-  color: #a8e6cf;
+:host ::ng-deep .markdown-content .hljs-string {
+  color: #CE9178;
 }
 
-:host ::ng-deep .markdown-content .hljs-number,
-:host ::ng-deep .markdown-content .hljs-symbol,
-:host ::ng-deep .markdown-content .hljs-variable {
-  color: #ffd580;
+:host ::ng-deep .markdown-content .hljs-attr {
+  color: #569CD6;
 }
 
-:host ::ng-deep .markdown-content .hljs-type,
+:host ::ng-deep .markdown-content .hljs-built_in,
+:host ::ng-deep .markdown-content .hljs-type {
+  color: #83c7c7;
+}
+
+:host ::ng-deep .markdown-content .hljs-params {
+  color: #569CD6;
+}
+
 :host ::ng-deep .markdown-content .hljs-class .hljs-title,
-:host ::ng-deep .markdown-content .hljs-function .hljs-title {
-  color: #82aaff;
+:host ::ng-deep .markdown-content .hljs-function .hljs-title,
+:host ::ng-deep .markdown-content .hljs-title.function_ {
+  color: #DCDCAA;
 }
 
 :host ::ng-deep .markdown-content .hljs-meta {
   color: #c792ea;
-}
-
-:host ::ng-deep .markdown-content img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1.5rem auto;
-  border-radius: var(--radius);
-}
-
-:host ::ng-deep .markdown-content table {
-  display: block;
-  max-width: 100%;
-  overflow-x: auto;
-  border-collapse: collapse;
-}
-
-:host ::ng-deep .markdown-content th,
-:host ::ng-deep .markdown-content td {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--border);
-  text-align: left;
-}
-
-:host ::ng-deep .markdown-content th {
-  color: white;
-  background: var(--bg-blog-post);
 }
 
 @media (max-width: 600px) {
