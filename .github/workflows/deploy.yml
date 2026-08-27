@@ -41,7 +41,7 @@ jobs:
 
       - name: Build Angular
         working-directory: kacperkaniadev
-        run: npm run build
+        run: npm run build --base-href /kacperkaniadev/
 
       - uses: actions/configure-pages@v5
 
