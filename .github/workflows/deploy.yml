@@ -36,11 +36,9 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: kacperkaniadev
         run: npm ci
 
       - name: Build Angular
-        working-directory: kacperkaniadev
         run: npm run build -- --base-href /kacperkaniadev/
 
       - uses: actions/configure-pages@v5
