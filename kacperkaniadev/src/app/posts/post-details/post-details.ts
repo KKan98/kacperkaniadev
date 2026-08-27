@@ -21,7 +21,7 @@ export class PostDetails implements OnInit {
     const post = PostsService.getPost(this.slug());
     console.log(post);
 
-    this.html.set(await PostsService.loadMarkdownContent('/posts/' + post?.fileName))
+    this.html.set(await PostsService.loadMarkdownContent('posts/' + post?.fileName))
     console.log(this.html());
   }
 }
