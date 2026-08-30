@@ -94,20 +94,28 @@
 :host ::ng-deep .markdown-content .hljs-selector-tag,
 :host ::ng-deep .markdown-content .hljs-literal,
 :host ::ng-deep .markdown-content .hljs-title,
+:host ::ng-deep .markdown-content .hljs-title.function_,
 :host ::ng-deep .markdown-content .hljs-section {
   color: #C586C0;
 }
 
-:host ::ng-deep .markdown-content .hljs-string {
+:host ::ng-deep .markdown-content .hljs-string,
+:host ::ng-deep .markdown-content .hljs-meta-string,
+:host ::ng-deep .markdown-content .hljs-regexp {
   color: #CE9178;
 }
 
-:host ::ng-deep .markdown-content .hljs-attr {
+:host ::ng-deep .markdown-content .hljs-attr,
+:host ::ng-deep .markdown-content .hljs-attribute,
+:host ::ng-deep .markdown-content .hljs-name,
+:host ::ng-deep .markdown-content .hljs-tag {
   color: #569CD6;
 }
 
 :host ::ng-deep .markdown-content .hljs-built_in,
-:host ::ng-deep .markdown-content .hljs-type {
+:host ::ng-deep .markdown-content .hljs-type,
+:host ::ng-deep .markdown-content .hljs-variable,
+:host ::ng-deep .markdown-content .hljs-template-variable {
   color: #83c7c7;
 }
 
@@ -117,12 +125,23 @@
 
 :host ::ng-deep .markdown-content .hljs-class .hljs-title,
 :host ::ng-deep .markdown-content .hljs-function .hljs-title,
+:host ::ng-deep .markdown-content .hljs-title.class_,
 :host ::ng-deep .markdown-content .hljs-title.function_ {
   color: #DCDCAA;
 }
 
 :host ::ng-deep .markdown-content .hljs-meta {
   color: #c792ea;
+}
+
+:host ::ng-deep .markdown-content .hljs-number,
+:host ::ng-deep .markdown-content .hljs-symbol,
+:host ::ng-deep .markdown-content .hljs-bullet {
+  color: #b5cea8;
+}
+
+:host ::ng-deep .markdown-content code.language-bash {
+  color: #83c7c7;
 }
 
 @media (max-width: 600px) {

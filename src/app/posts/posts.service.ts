@@ -21,15 +21,15 @@ marked.use({
 export class PostsService {
   static readonly posts: PostModel[] = [
     {
-      slug: 'initial-blog',
-      title: 'Initial Blog Post',
-      summary: 'I figure out how to make easily reausable blog template using angular...',
+      slug: 'create-blog-using-angular',
+      title: 'Create a blog using Angular',
+      summary: 'How to create a blog using angular and deploy it with Github Pages',
       footer: {
-        creationDate: new Date("2026-08-26"),
+        creationDate: new Date("2026-08-30"),
         readingTime: 25,
         words: 152
       },
-      fileName: 'initial-blog.md'
+      fileName: 'create-blog-using-angular.md'
     }
   ]
 
