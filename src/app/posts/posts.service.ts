@@ -3,6 +3,34 @@ import { PostModel } from "./post.model";
 import { marked } from 'marked';
 import hljs from 'highlight.js/lib/common';
 
+// highlight.js emits a single `hljs-keyword` class; split out control-flow/module
+// keywords so they can be coloured separately from declaration keywords.
+const CONTROL_KEYWORDS = new Set([
+  'import', 'export', 'from', 'as', 'default', 'return', 'if', 'else', 'for', 'while',
+  'do', 'switch', 'case', 'break', 'continue', 'throw', 'try', 'catch', 'finally',
+  'new', 'await', 'async', 'yield', 'delete', 'in', 'of'
+]);
+
+function markControlKeywords(html: string) {
+  return html.replace(
+    /<span class="hljs-keyword">([a-z]+)<\/span>/g,
+    (match, keyword: string) =>
+      CONTROL_KEYWORDS.has(keyword)
+        ? `<span class="hljs-keyword control_">${keyword}</span>`
+        : match
+  );
+}
+
+// highlight.js leaves class fields untagged; tag bare identifiers that open a line
+// and are followed by `=` or `:` so they get the property colour.
+function markClassProperties(html: string) {
+  return html.replace(
+    /^(\s+)([A-Za-z_$][\w$]*)(?=\s*[:=][^=])/gm,
+    (_match, indent: string, name: string) =>
+      `${indent}<span class="hljs-property">${name}</span>`
+  );
+}
+
 marked.use({
   renderer: {
     code({ text, lang }) {
@@ -12,7 +40,8 @@ marked.use({
         : hljs.highlightAuto(text).value;
 
       const languageClass = language ? ` language-${language}` : '';
-      return `<pre><code class="hljs${languageClass}">${highlighted}</code></pre>`;
+      const decorated = markClassProperties(markControlKeywords(highlighted));
+      return `<pre><code class="hljs${languageClass}">${decorated}</code></pre>`;
     }
   }
 });

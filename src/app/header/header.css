@@ -1,7 +1,7 @@
 header {
   background-color: var(--bg-header);
 }
-  
+
 .navbar {
   display: flex;
   justify-content: space-between;

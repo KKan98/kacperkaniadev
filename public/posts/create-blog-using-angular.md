@@ -74,9 +74,65 @@ Now, App component is already called within *index.html* file. This is the begin
 </body>
 </html>
 ```
-Take note that `<app-root>` is within `<body>` element. This is it. No other components will be added here, because we only use **App** component as our entry. The rest is default HTML.
+Take note that `<app-root>` is within `<body>` element. That is all. No other components will be added here, because we only use **App** component as our entry. The rest is default HTML.
 
 ### Header & Footer
+
+I wanted header and footer to be present on all pages. In Angular it is very easy to set up, we create two components that will represent those elements and we add them to the component tree.
+
+Run
+```bash
+ng generate component header --skip-tests
+```
+or shorter
+```bash
+ng g c header --skip-tests
+```
+Angular CLI provides us with those commands to help us save some time. They will create basic Angular component with css, HTML and ts files. I am not planning to test the innerHTML of the page so 
+I skip the tests.
+
+Header will be used to navigation, I keep it very basic:
+```html
+<header>
+    <div class="navbar">
+      <p>Kacper Kania</p>
+      <nav>
+        <a [routerLink]="['/']">Home</a>
+        <a [routerLink]="['/about']">About</a>
+      </nav>
+    </div>
+  </header>
+```
+
+`[routerLink]` will be explained in the next chapter (Routing). Rest is basic HTML code.
+
+Very simple footer:
+
+```html
+  <footer>
+    <p>© {{ currentYear }} Kacper Kania</p>
+  </footer>
+```
+
+`{{ currentYear }}` is a way to bind dynamically properties from our .ts file to HTML. It is called **text interpolation** and is one of key features of Angular. In this case I want to always display current year and don't worry about maintaining this in the future.
+
+```typescript
+export class Footer {
+  currentYear = new Date().getFullYear();
+}
+```
+
+Then, to always display them, we need to have them wrapping our main content of `app.html`. Import them within your components imports array and add them to the html:
+```html
+<app-header />
+...
+<!-- html content -->
+...
+<app-footer />
+```
+
+
+
 ### Routing
 ### In Memory DB & Posts Service
 ### Markdown
