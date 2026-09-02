@@ -3,8 +3,6 @@ import { PostModel } from "./post.model";
 import { marked } from 'marked';
 import hljs from 'highlight.js/lib/common';
 
-// highlight.js emits a single `hljs-keyword` class; split out control-flow/module
-// keywords so they can be coloured separately from declaration keywords.
 const CONTROL_KEYWORDS = new Set([
   'import', 'export', 'from', 'as', 'default', 'return', 'if', 'else', 'for', 'while',
   'do', 'switch', 'case', 'break', 'continue', 'throw', 'try', 'catch', 'finally',
@@ -21,8 +19,6 @@ function markControlKeywords(html: string) {
   );
 }
 
-// highlight.js leaves class fields untagged; tag bare identifiers that open a line
-// and are followed by `=` or `:` so they get the property colour.
 function markClassProperties(html: string) {
   return html.replace(
     /^(\s+)([A-Za-z_$][\w$]*)(?=\s*[:=][^=])/gm,
@@ -46,7 +42,6 @@ marked.use({
   }
 });
 
-@Service()
 export class PostsService {
   static readonly posts: PostModel[] = [
     {
