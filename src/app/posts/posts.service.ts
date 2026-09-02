@@ -1,4 +1,3 @@
-import { Service } from "@angular/core";
 import { PostModel } from "./post.model";
 import { marked } from 'marked';
 import hljs from 'highlight.js/lib/common';

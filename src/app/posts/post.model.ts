@@ -7,5 +7,5 @@ export type PostModel = {
     readingTime: number,
     words: number
   },
-  fileName: string
+  fileName: `${string}.md`
 }
