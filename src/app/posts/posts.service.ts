@@ -49,8 +49,8 @@ export class PostsService {
       summary: 'How to create a blog using angular and deploy it with Github Pages',
       footer: {
         creationDate: new Date("2026-08-30"),
-        readingTime: 25,
-        words: 152
+        readingTime: 15,
+        words: 2718
       },
       fileName: 'create-blog-using-angular.md'
     }

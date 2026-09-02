@@ -405,5 +405,25 @@ That's it.
 
 Now everytime we click on a post within `posts` that are displayed on a home page, we will be redirected to `posts/:slug` and corresponding markdown file will be fetched, parsed and placed within *post-details.html*.
 
-### Deploying on Github Pages
-### Summary
+## Deploying on Github Pages
+
+To deploy the application to Github Pages follow tutorial from [github docs](https://docs.github.com/en/pages/quickstart).
+
+Because Github Pages host static SPAs, our angular application will would not compile within browser, because we use typescript. To solve this run:
+
+```bash
+npm run build
+```
+
+this will create *dist* folder with *index.html* file. The file is written with javascript and is sutiable for Github Pages deployment. By default this command runs underneath `ng build`:  
+compile TypeScript -> process templates/styles -> bundle JavaScript -> process/copy assets -> write the result to dist
+
+You can now push the content of dist/<repo-name>/browser folder to the repository, set up Github Pages and voila! You just created your own blog using Angular and Github Pages!
+
+## Summary
+
+Creating blog with Angular is not complicated. Why would you choose this approach instead of using already build for it websites? Whenever your goal is to learn not only to teach and share, you will find yourself wanting to make it from the ground. We have explored many crucial Angular features and still many are to be learned.
+
+Thank you for reading.  
+I hope you enyojed it.  
+Good luck!
